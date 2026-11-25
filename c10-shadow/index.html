@@ -1,0 +1,15 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ガラスの影の試作</title>
+<style>:root{color-scheme:light dark}body{margin:0 auto;max-width:900px;padding:16px;font-family:system-ui,sans-serif;line-height:1.6;background:Canvas;color:CanvasText}img{max-width:100%;height:auto;display:block;margin:8px 0 24px}h2{font-size:1.05rem;margin-top:28px}</style></head><body>
+<h1>ガラスの影の試作(会議 c10)</h1>
+<p>本物の頁の糸・照りの上に、影だけを CPU で計算した物理の影を重ねた静止画である。焦光の強さ g・透け t・端の均しは、まだ UI に無い。</p>
+<h2>1. 既定の伸び: 標準 / 物理 g 1 / 物理 g 4 / 一様の透け t 0.6</h2><img src="S1_a.png" alt="">
+<p>物理のままだと、高い弧の影は標準と同じく黒い(誤りではなく物理)。</p>
+<h2>2. 既定の伸び: 物理 + 透け(左 t 0.6・g 1、右 t 0.8・g 4)</h2><img src="S1_hyb06.png" alt="">
+<p>推奨案 (B)。右がガラスらしく見える組の候補。</p>
+<h2>3. 伸び 0(張った糸)</h2><img src="S2_a.png" alt=""><img src="S2_zoom.png" alt="">
+<p>糸が布に近いと、影の中に焦光の明るい筋が立つ。物理だけで出る。</p>
+<h2>4. 色の糸(#40a080・tint 0.5)</h2><img src="S3_a.png" alt="">
+<h2>5. 分光(太い糸 width 10、g 4): Δη 0.2 / 均しあり 0.2 / 0.02</h2><img src="S4_bend.png" alt="">
+<p>Δη 0.2 で筋の縁に虹。実のガラス程度の 0.02 ではほぼ見えない。白の飽和は誇張(g 4)の帰結。</p>
+<h2>参考: shadowAlpha 0.5</h2><img src="S1_b.png" alt="">
+</body></html>
