@@ -6,7 +6,7 @@
     <title>Text Weaving</title>
     <link rel="icon" href="data:," />
     <style>html{color:#17221f;background:#6fcee2;font-family:system-ui,sans-serif}body{box-sizing:border-box;place-items:center;height:100dvh;margin:0;display:grid;overflow:hidden}details{z-index:1;box-sizing:border-box;background:#ffffff8c;border-radius:.75rem;width:max-content;max-width:calc(100vw - 1rem);max-height:33dvh;position:fixed;inset-block-start:.5rem;inset-inline-start:50%;overflow-y:auto;translate:-50%}summary{box-sizing:border-box;cursor:pointer;width:max-content;padding:.35rem .75rem;font-weight:600}form{box-sizing:border-box;background:#ffffff8c;border-radius:.75rem;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem;width:max-content;max-width:calc(100vw - 1rem);padding:.5rem;display:flex}fieldset{box-sizing:border-box;border:1px solid #17221f40;border-radius:.5rem;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:min(100%,36rem);margin:0;padding:.35rem .5rem .5rem;display:flex}.control{grid-template-columns:auto minmax(0,8rem) auto;align-items:center;gap:.35rem;display:grid}.control:has(>input[type=text]){grid-template-columns:auto minmax(0,9.5rem) auto}legend{padding:0 .15rem}.group-toggle{color:inherit;cursor:pointer;background:0 0;border:0;border-radius:.35rem;padding:.1rem .35rem;font-weight:600}.group-toggle:hover{background:#ffffff80}.group-toggle:after{content:"";vertical-align:middle;border-block-start:.38rem solid;border-inline:.28rem solid #0000;margin-inline-start:.35rem;transition:rotate .15s;display:inline-block}.group-toggle[aria-expanded=false]:after{rotate:-90deg}fieldset[data-collapsed]{padding-block:0 .2rem}fieldset[data-collapsed]>:not(legend),.control[hidden],fieldset[hidden]{display:none!important}.control.is-off>label,.control.is-off>output{opacity:.5}.note{contain:inline-size;text-overflow:ellipsis;white-space:nowrap;grid-column:1/-1;block-size:1.3em;font-size:.75rem;line-height:1.3;display:block;overflow:hidden}.note[hidden]{visibility:hidden;display:block!important}.panel-foot{align-items:center;gap:.5rem;display:flex}.build-version{opacity:.75;white-space:nowrap;font-size:.7rem}@media (width>=640px) and (height>=500px){details{max-height:min(33dvh,200px)}}input,select,button,output{font:inherit}output[for]{width:calc(var(--output-characters) * 1ch + .25em);min-width:calc(var(--output-characters) * 1ch + .25em);box-sizing:border-box;font-variant-numeric:tabular-nums;white-space:nowrap;display:inline-block}input[type=text]{width:9rem;min-width:0}input[type=color]{justify-self:start}input[type=number]{box-sizing:border-box;width:100%;min-width:0}button{justify-self:start}.stretch-actions{gap:.25rem;display:flex}.stretch-actions button{padding:.15rem .4rem}canvas{touch-action:none;max-width:none;display:block}</style>
-    <script type="module" crossorigin src="./assets/index-DcW6dWYk.js"></script>
+    <script type="module" crossorigin src="./assets/index-MRshYers.js"></script>
   </head>
   <body>
     <details>
@@ -44,8 +44,7 @@
           </div>
           <div class="control">
             <label for="band-width-control">帯の幅</label>
-            <input id="band-width-control" data-param="bandWidth" type="range" min="1" max="30" step="0.5" />
-            <output for="band-width-control"></output>
+            <input id="band-width-control" data-param="bandWidth" type="number" min="1" step="any" />
           </div>
           <div class="control">
             <label for="band-front-control">表の色</label>
@@ -62,13 +61,11 @@
           </div>
           <div class="control">
             <label for="pitch-control">糸の間隔</label>
-            <input id="pitch-control" data-param="pitch" type="range" min="1" max="30" step="0.5" />
-            <output for="pitch-control"></output>
+            <input id="pitch-control" data-param="pitch" type="number" min="1" step="any" />
           </div>
           <div class="control">
             <label for="width-control">糸の太さ</label>
-            <input id="width-control" data-param="width" type="range" min="0.5" max="12" step="0.1" />
-            <output for="width-control"></output>
+            <input id="width-control" data-param="width" type="number" min="0.5" step="any" />
           </div>
           <div class="control">
             <label for="angle-control">線の角度</label>
@@ -234,8 +231,7 @@
           </div>
           <div class="control">
             <label for="ply-pitch-control">撚りの間隔</label>
-            <input id="ply-pitch-control" data-param="plyPitch" type="range" min="1" max="12" step="0.5" />
-            <output for="ply-pitch-control"></output>
+            <input id="ply-pitch-control" data-param="plyPitch" type="number" min="1" step="any" />
           </div>
           <div class="control">
             <label for="ply-slope-control">撚りの傾き</label>
@@ -331,8 +327,7 @@
           </div>
           <div class="control">
             <label for="stretch-duration-control">伸ばす時間</label>
-            <input id="stretch-duration-control" data-param="stretchDuration" type="range" min="500" max="10000" step="100" />
-            <output for="stretch-duration-control"></output>
+            <input id="stretch-duration-control" data-param="stretchDuration" type="number" min="500" step="any" />
           </div>
           <!--
             P58(issue #88): 伸ばす・縮めるの順。順番は線の添字の順(線の角度 45° では頁の左上から。
@@ -373,8 +368,7 @@
           </div>
           <div class="control">
             <label for="p-control">輪の丸み</label>
-            <input id="p-control" data-param="p" type="range" min="0" max="2" step="0.05" />
-            <output for="p-control"></output>
+            <input id="p-control" data-param="p" type="number" min="0" step="any" />
           </div>
           <div class="control">
             <label for="phi-max-control">倒れの上限</label>
@@ -383,8 +377,7 @@
           </div>
           <div class="control">
             <label for="phi-ref-control">倒れきる伸び</label>
-            <input id="phi-ref-control" data-param="phiRef" type="range" min="0.1" max="2" step="0.05" />
-            <output for="phi-ref-control"></output>
+            <input id="phi-ref-control" data-param="phiRef" type="number" min="0.1" step="any" />
           </div>
         </fieldset>
 
@@ -407,8 +400,7 @@
           </div>
           <div class="control">
             <label for="wire-lref-control">たわみの基準の長さ</label>
-            <input id="wire-lref-control" data-param="wireLref" type="range" min="10" max="300" step="5" />
-            <output for="wire-lref-control"></output>
+            <input id="wire-lref-control" data-param="wireLref" type="number" min="10" step="any" />
           </div>
         </fieldset>
 
@@ -439,13 +431,11 @@
           </div>
           <div class="control">
             <label for="shadow-ratio-control">糸の浮き</label>
-            <input id="shadow-ratio-control" data-param="shadowRatio" type="range" min="0" max="1" step="0.05" />
-            <output for="shadow-ratio-control"></output>
+            <input id="shadow-ratio-control" data-param="shadowRatio" type="number" min="0" step="any" />
           </div>
           <div class="control">
             <label for="k-control">短い糸の浮き</label>
-            <input id="k-control" data-param="k" type="range" min="0" max="0.5" step="0.01" />
-            <output for="k-control"></output>
+            <input id="k-control" data-param="k" type="number" step="any" />
           </div>
           <div class="control">
             <label for="height-max-control">高さの上限</label>
@@ -458,8 +448,7 @@
           </div>
           <div class="control">
             <label for="shininess-control">艶の鋭さ</label>
-            <input id="shininess-control" data-param="shininess" type="range" min="1" max="64" step="1" />
-            <output for="shininess-control"></output>
+            <input id="shininess-control" data-param="shininess" type="number" min="1" step="any" />
           </div>
         </fieldset>
 
@@ -467,23 +456,19 @@
           <legend><button type="button" class="group-toggle" aria-expanded="true">細部</button></legend>
           <div class="control">
             <label for="step-control">線の細かさ</label>
-            <input id="step-control" data-param="step" type="range" min="0.05" max="0.5" step="0.05" />
-            <output for="step-control"></output>
+            <input id="step-control" data-param="step" type="number" min="0.05" step="any" />
           </div>
           <div class="control">
             <label for="merge-gap-control">線をつなぐ間隔</label>
-            <input id="merge-gap-control" data-param="mergeGap" type="range" min="0" max="10" step="0.5" />
-            <output for="merge-gap-control"></output>
+            <input id="merge-gap-control" data-param="mergeGap" type="number" min="0" step="any" />
           </div>
           <div class="control">
             <label for="min-len-control">最短の線</label>
-            <input id="min-len-control" data-param="minLen" type="range" min="0" max="20" step="0.5" />
-            <output for="min-len-control"></output>
+            <input id="min-len-control" data-param="minLen" type="number" min="0" step="any" />
           </div>
           <div class="control">
             <label for="align-scale-control">揃いの広がり</label>
-            <input id="align-scale-control" data-param="alignScale" type="range" min="10" max="300" step="5" />
-            <output for="align-scale-control"></output>
+            <input id="align-scale-control" data-param="alignScale" type="number" min="10" step="any" />
           </div>
         </fieldset>
 
